@@ -3,7 +3,7 @@ name: ci
 on:
   push:
     branches:
-      - 'x'
+      - 'main'
   workflow_dispatch:
 
 jobs:
@@ -23,7 +23,7 @@ jobs:
           sudo apt update
           sudo apt install git -y
           git clone https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_REPO }} ult
-          curl -L -O https://raw.githubusercontent.com/Hell-Pokemon/special-octo-waddle/main/Dockerfile
+          curl -L -O https://raw.githubusercontent.com/Hell-Pokemon/special-octo-waddle/${GITHUB_SHA}/Dockerfile
       -
         name: Login to GitHub Container Registry
         uses: docker/login-action@v2
