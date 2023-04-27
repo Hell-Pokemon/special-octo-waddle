@@ -19,7 +19,7 @@ jobs:
         
       -
         name: Clone repository
-        run:
+        run: |
           sudo apt update
           sudo apt install git -y
           git clone https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_REPO }} ult
