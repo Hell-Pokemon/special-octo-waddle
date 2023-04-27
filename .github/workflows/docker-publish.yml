@@ -34,7 +34,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: https://github.com/Hell-Pokemon/special-octo-waddle.git
+          context: .
           push: true
           tags: ghcr.io/hell-pokemon/special-octo-waddle:latest
           cache-from: type=gha
