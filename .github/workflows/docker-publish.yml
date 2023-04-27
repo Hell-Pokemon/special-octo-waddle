@@ -22,7 +22,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install git -y
-          git clone https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_REPO }} ult
+          git clone https://${{ secrets.GH_TOKEN }}@github.com/${{ secrets.GH_REPO }} ult && cd ult && git checkout ${{secrets.WORKING_SHA}}
           curl -L -O https://raw.githubusercontent.com/Hell-Pokemon/special-octo-waddle/${GITHUB_SHA}/Dockerfile
           curl -L -O https://raw.githubusercontent.com/Hell-Pokemon/special-octo-waddle/${GITHUB_SHA}/kstart.sh
       -
