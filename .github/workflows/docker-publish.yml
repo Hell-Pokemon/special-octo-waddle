@@ -36,6 +36,6 @@ jobs:
         with:
           context: ult
           push: true
-          tags: hell-pokemon/special-octo-waddle:latest
+          tags: ghcr.io/hell-pokemon/special-octo-waddle:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
